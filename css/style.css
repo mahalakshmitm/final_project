@@ -243,8 +243,8 @@ marquee {
 }
 
 .banner {
-    height: 60vh;
-    background: url(/images/banner.jpg) no-repeat;
+    height: 80vh;
+    background: url(../images/banner.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -253,7 +253,7 @@ marquee {
   }
   .banner1 {
     height: 80vh;
-    background: url(/images/banner1.jpg) no-repeat;
+    background: url(../images/banner1.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -262,7 +262,7 @@ marquee {
   }
   .banner2 {
     height: 80vh;
-    background: url(/images/banner2.jpg) no-repeat;
+    background: url(../images/banner2.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
