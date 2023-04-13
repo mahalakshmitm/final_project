@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+	<!-- Do no make any changes to this file, but you should still review the tags to make sure that you are familiar with them. -->
+
+<html lang="en">
+<!-- All of the meta data for the page belongs in the header tag -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Link to the favicon image -->
+	<link rel="icon" href="images/favicon.ico">
+	<!-- Link to the reset file -->
+	<link rel="stylesheet" href="css/reset.css">
+	<!-- Link to the stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Avenir" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baskerville" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Covered By Your Grace" rel="stylesheet">
+	<title>About Me</title>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header class="header sticky" style="z-index: 2;">
+        <!-- Logo -->
+        <a href="#" class="logo">MadsArt</a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a class="current" href="index.html">Home</a></li>
+                <li><a href="journey.html">My Journey</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main content -->
+    <main>
+        <article>
+            <div class="banner"></div>
+            <h1 class="title">
+                Hey there!
+            </h1>
+            <marquee> Welcome to my art gallery!</marquee>
+            <div class="card">     
+            <img src="../images/Aboutme.jpg" width="600px" height= "600px"alt="Profile Picture">
+            <div class="card_content">
+            <h2>Little about me</h2>
+            <p>
+                I'm a passionate artist and a product designer. As a person with immense love for creativity and art, I pursued undergraduate in fashion. Well, like every fashion student out there, 
+                I also wanted to becomes a fashion designer. 
+                But life had different plans for me, I joined an AI fashion company which introduced me to product design. That’s where I found my true calling for User Experience Design. I really enjoyed crafting every single component 
+                of the design system and the thinking process that went into every single user flows. I decided, this is the stream that would help me use my design skills and empathy for a bigger cause.
+            </p>
+        
+        </div>
+        </div>  
+        <section>
+    <h2 class="scard_h2"> My Skills</h2>
+    <div class="small cards">
+        <a href="https://www.instagram.com/the.sylph/" class="scard">
+            <img src="../images/fashion.jpg" width="300px" height="200px" alt="Profile Picture">
+            <div class="scard_content">
+                <h3>Fashion Design</h3>
+                <p>
+                    I have more than 5 years of experience in fashion design and garment construction
+                </p>
+            </div>
+        </a>
+        <a href="https://www.mahalakshmitm.com/" class="scard">
+            <img src="../images/product.jpg" width="300px" height="200px" alt="Profile Picture">
+            <div class="scard_content">
+                <h3>Product Design</h3>
+                <p class="scard_p">
+                    Tools I know, Figma, Adobe XD, Zeplin, Sketch and always curious to learn
+                </p>
+            </div>
+        </a>
+        <a href="https://www.behance.net/Mahalakshmi2130" class="scard">
+            <img src="../images/digitalart.jpg" width="300px" height="200px" alt="Profile Picture">
+            <div class="scard_content">
+                <h3>Digital Art</h3>
+                <p>
+                    I do Illustrations, Graphic design. Procreate, Adobe Fresco are the major tools I use
+                </p>
+            </div>
+        </a>
+        <a href="https://www.mahalakshmitm.com/" class="scard">
+            <img src="../images/painting.jpg" width="300px" height="200px" alt="Profile Picture">
+            <div class="scard_content">
+                <h3>Paintings</h3>
+                <p>
+                    Love exploring different medium - Acrylic, Gouache, Watercolors
+                </p>
+            </div>
+        </a>
+    </div>
+</section>
+        </article>
+    </main>
+    <script>
+const header = document.querySelector('.header');
+
+// Function to toggle animation class on scroll
+function toggleHeaderAnimation() {
+  // Get the current scroll position
+  const scrollPosition = window.scrollY;
+
+  // Add animation class if scrolled beyond a certain threshold, otherwise remove it
+  if (scrollPosition > 0) {
+    header.classList.add('animate-header');
+  } else {
+    header.classList.remove('animate-header');
+  }
+};
+
+// Add event listener to window scroll event
+window.addEventListener('scroll', toggleHeaderAnimation);
+
+window.addEventListener('scroll', function() {
+  // Calculate the opacity based on scroll position
+  var opacity = 1 - window.pageYOffset / (window.innerHeight / 2);
+  // Set the opacity on the banner element
+  document.querySelector('.banner').style.opacity = opacity;
+});
+  
+</script>
+<footer>
+    <p class="thanks">
+      Thanks for visiting!
+    </p>
+    <p>Created with  <i class="fas fa-heart"> </i> by Maha </p>
+  </footer>
+    
+</body>
+</html>

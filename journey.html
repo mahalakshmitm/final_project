@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+	<!-- Do no make any changes to this file, but you should still review the tags to make sure that you are familiar with them. -->
+
+<html lang="en">
+<!-- All of the meta data for the page belongs in the header tag -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Link to the favicon image -->
+	<link rel="icon" href="images/favicon.ico">
+	<!-- Link to the reset file -->
+	<link rel="stylesheet" href="css/reset.css">
+	<!-- Link to the stylesheet -->
+	<link rel="stylesheet" href="css/style1.css">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Avenir" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baskerville" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Covered By Your Grace" rel="stylesheet">
+	<title>About Me</title>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header class="header sticky" style="z-index: 2;">
+        <!-- Logo -->
+        <a href="index.html" class="logo">MadsArt</a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="current" href="journey.html">My Journey</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      <article>
+        <div class="banner1"></div>
+        <h1 class="title">
+            My Design Journey
+        </h1>
+    <div class="container">
+        <div class="timeline">
+          <ul>
+            <li>
+              <div class="timeline-content">
+                <h3 class="date">20th may, 2010</h3>
+                <h1>Product Design</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ab laudantium voluptatibus aut eos placeat laborum, quibusdam exercitationem labore.</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h3 class="date">20th may, 2010</h3>
+                <h1>Illustrations</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ab laudantium voluptatibus aut eos placeat laborum, quibusdam exercitationem labore.</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h3 class="date">20th may, 2010</h3>
+                <h1>Graphic Design</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ab laudantium voluptatibus aut eos placeat laborum, quibusdam exercitationem labore.</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h3 class="date">20th may, 2010</h3>
+                <h1>Heading 4</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ab laudantium voluptatibus aut eos placeat laborum, quibusdam exercitationem labore.</p>
+              </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                  <h3 class="date">20th may, 2010</h3>
+                  <h1>Heading 5</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ab laudantium voluptatibus aut eos placeat laborum, quibusdam exercitationem labore.</p>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-content">
+                  <h3 class="date">20th may, 2010</h3>
+                  <h1>Heading 6</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ab laudantium voluptatibus aut eos placeat laborum, quibusdam exercitationem labore.</p>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script>
+      const header = document.querySelector('.header');
+      
+      // Function to toggle animation class on scroll
+      function toggleHeaderAnimation() {
+        // Get the current scroll position
+        const scrollPosition = window.scrollY;
+      
+        // Add animation class if scrolled beyond a certain threshold, otherwise remove it
+        if (scrollPosition > 0) {
+          header.classList.add('animate-header');
+        } else {
+          header.classList.remove('animate-header');
+        }
+      };
+      
+      // Add event listener to window scroll event
+      window.addEventListener('scroll', toggleHeaderAnimation);
+      
+      window.addEventListener('scroll', function() {
+        // Calculate the opacity based on scroll position
+        var opacity = 1 - window.pageYOffset / (window.innerHeight / 2);
+        // Set the opacity on the banner element
+        document.querySelector('.banner').style.opacity = opacity;
+      });
+        
+      </script>
+    </body>
+    </html>
+    

@@ -1,0 +1,606 @@
+/* Theming */
+
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+    font-family:"Avenir","Sacramento" ;
+}
+a{
+    text-decoration: none;
+}
+a.scard{
+   color: black;
+}
+ul{
+    list-style: none;
+}
+
+/* Header */
+/* .header{
+    background: yellow;
+    box-shadow: 1px 1px 5px 0px gray;
+    position: sticky;
+    top: 0;
+    width: 100%;
+} */
+/* Add the CSS styles for the .header element */
+.header {
+    background: yellow;
+    box-shadow: 1px 1px 5px 0px gray;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    /* Add initial styles for animation */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Add animation class styles */
+  .animate-header {
+    background-color: #dc306e;
+  }
+  
+/* Logo */
+.logo{
+    font-family: "Covered By Your Grace","Avenir", "Times New Roman";
+    display: inline-block;
+    color: black;
+    font-size: 40px;
+    margin-left: 10px;
+}
+/* CARD STYLE */
+.card {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px #dc306e;
+    background-color: yellow;
+    border-radius: 20px;
+    padding: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    animation: cardFadeIn 1s ease-in-out;
+}
+
+.card img {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  width: 100%;
+  height: auto;
+  max-width: 300px; /* Set a maximum width for the image */
+  border-radius: 10px;
+  animation: imageSlideUp 1s ease-in-out; /* Add a slide-up animation */
+}
+
+marquee {
+  color: #dc306e;
+  font-family: "Avenir", "Times New Roman";
+  font-size: 40px;
+  margin-top: 20px;
+  animation: marqueeFadeIn 1s ease-in-out; /* Add a fade-in animation */
+}
+/* .card {
+    max-width: 400px; /* Set a maximum width for tablet devices */
+  /* } */
+
+/* Animation keyframes */
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imageSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes marqueeFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* SMALL CARDS */
+.small.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 10px; 
+  padding-right: 10px;
+  padding-top: 40px;
+}
+
+.scard {
+  flex-basis: calc(50% - 20px); /* Set flex basis to 50% minus margin on mobile view */
+  border: solid 1px #dc306e;
+  border-radius: 20px;
+  align-items: center;
+  padding: 20px;
+  margin: 10px; /* Reset margin between cards on mobile view */
+}
+
+.scard img {
+  border-radius: 10px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.scard_content {
+  font-family: "Avenir";
+  margin: 20px 0;
+  white-space: normal;
+  max-width: 100%;
+  overflow-wrap: break-word; /* Add this property to allow long words to break and wrap */
+}
+
+.scard p {
+  font-size: 16px;
+  padding-left: 40px;
+  text-align: justify;
+}
+
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color:yellow;
+    overflow: hidden;
+
+}
+.menu a{
+    display: block;
+    padding: 20px;
+    color: black;
+}
+.menu a:hover{
+    background-color: #dc306e;
+}
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    /* float: right; */
+    position: fixed;
+    right: 0;
+    padding: 26px 20px;
+}/* Style label tag */
+
+.hamb-line {
+    background: black;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: black;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+.banner {
+    height: 80vh;
+    background: url(banner.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    opacity: 1; /* Initial opacity */
+    transition: opacity 0.8s ease; /* Add transition effect */
+  }
+  .scard_h2{
+  font-size: 40px;
+  color: blue;
+  text-align: center;
+  margin-top: 30px;
+  }
+  
+.title{
+    font-size: 40px;
+    padding-top: 20px;
+    font-family: "Avenir","Times New Roman" ;
+    text-align: center;
+}
+p{
+  padding-top: 16px;
+  font-size: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: justify;
+}
+footer {
+  background-color:dc306e;
+  color: #dc306e;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer p{
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+p .thanks{
+  padding-top: 20px;
+  font-size: 24px;
+  padding-left: 60px;
+  padding-right: 60px;
+  text-align: center;
+}
+h3{
+  color: blue;
+  font-size: 20px;
+  text-align: center;
+}
+footer {
+  background-color:#dc306e;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+
+}
+p .thanks{
+  padding-top: 20px;
+  font-size: 14px;
+  padding-left: 60px;
+  padding-right: 60px;
+  text-align: center;
+}
+/*gallery*/
+
+* {
+  box-sizing: border-box;
+}
+h2{
+  font-family: "Avenir", 'Times New Roman', Times, serif;
+  font-size: 40px;
+  text-align: center;
+}
+body {
+  background-color: white;
+  /* padding: 20px; */
+  font-family: Avenir,"Times New Roman",;
+}
+#myBtnContainer{
+  display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Center website */
+
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+  padding:20px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+.column {
+  /* float: left; */
+  display:inline-block;
+  width: 33.33%;
+  display: none; /* Hide columns by default */
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+    padding: 10px;
+    /* border: solid pink; */
+    border-radius: 20px;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding:40px;
+}
+
+.column {
+  width: 100%;
+}
+
+.content {
+  font-family: Avenir,"Times New Roman";
+  text-align: center;
+}
+
+.content img {
+  border: 2px solid #dc306e;
+  border-radius: 20px;
+}
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+h4{
+  font-family: Sacramento,"Times New Roman";
+  font-size: 40px;
+}
+
+/* Style the buttons */
+.btn {
+  border: #E91E63 solid;
+  font-family: Avenir,"Times New Roman";
+  outline: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .btn:hover {
+  background-color: yellow;
+  color: black;
+}
+
+/* -------------------------------TABLET----------------- */
+@media screen and (min-width: 764px) {
+  p {
+    padding-top: 16px;
+    font-size: 18px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: justify;
+}
+h3{
+  font-size: 24px;
+}
+.scard p {
+  font-size: 20px;
+  padding-left: 40px;
+  text-align: justify;
+}
+}
+  
+/* -------------------------------DESKTOP----------------- */
+@media screen and (min-width: 1024px) {
+  #myBtnContainer{
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    justify-content: space-evenly;
+  }
+ /* SMALL CARDS */
+.small.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 49px;
+  padding-top: 40px;
+}
+
+.scard {
+  position: relative; /* Add position relative to the card element */
+  flex-basis: calc(20% - 40px);
+  border: solid 1px #dc306e;
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  padding: 0px;
+  margin: 10px; /* Reset margin between cards on desktop */
+}
+
+.scard img {
+  border-radius: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.scard_content {
+  font-family: "Avenir";
+  margin: 20px 0;
+  white-space: normal;
+  text-align: center;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.scard p {
+  font-size: 18px;
+  padding-left: 30px;
+  text-align: justify;
+}
+
+.scard:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  /* Add background color animation directly to the card */
+  animation: colorful-hover 2s ease infinite;
+}
+
+/* Add colorful animation effect */
+@keyframes colorful-hover {
+  0% {
+    background-color: #ff7eb6;
+  }
+  25% {
+    background-color: #7eb6ff;
+  }
+  50% {
+    background-color: #a57eff;
+  }
+  75% {
+    background-color: #ffdb7e;
+  }
+  100% {
+    background-color: #dc306e;
+  }
+}
+
+  
+  /* CARD STYLING */
+  .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: solid 0.5px black;
+    border-radius: 20px;
+    background-color: yellow;
+    padding: 30px;
+    margin: 0 20px;
+    min-width: 300px;
+    margin-left: 40px;
+    margin-right: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    animation: cardFadeIn 1s ease-in-out;
+}
+ .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        /* float: right; */
+        position: fixed;
+        right: 0;
+        grid-column:end;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        display: inline-flex;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: blue;
+    }
+    .menu a.current{
+      background-color: transparent;
+      color: blue ;
+      text-decoration: underline;
+
+  }
+    .hamb{
+        display: none;
+    }
+
+    .m-p-g__thumbs-img{
+        height: 40%;
+        width: 40%;
+    }
+
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  footer {
+    background-color:#dc306e;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+  
+  }
+  p .thanks{
+    padding-top: 20px;
+    font-size: 24px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: center;
+  }
+  
+}
+

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+	<!-- Do no make any changes to this file, but you should still review the tags to make sure that you are familiar with them. -->
+
+<html lang="en">
+<!-- All of the meta data for the page belongs in the header tag -->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Link to the favicon image -->
+	<link rel="icon" href="images/favicon.ico">
+	<!-- Link to the reset file -->
+	<link rel="stylesheet" href="css/reset.css">
+	<!-- Link to the stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Avenir" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baskerville" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Covered By Your Grace" rel="stylesheet">
+	<title>About Me</title>
+</head>
+
+<body>
+     <!-- Navigation bar -->
+     <header class="header sticky">
+        <!-- Logo -->
+        <a href="index.html" class="logo">MadsArt</a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="journey.html">My Journey</a></li>
+              <li><a class="current" href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<h2>My Gallery</h2>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn " onclick="filterSelection('lettering')"> Lettering</button>
+  <button class="btn" onclick="filterSelection('illustrations')"> Illustrations</button>
+  <button class="btn" onclick="filterSelection('people')"> Wall Painting</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="pictures">
+<div class="row">
+  <div class="column lettering">
+    <div class="content">
+      <img src="/images/Ant.JPG" alt="Mountains" style="width:100%">
+      <h4>Mountains</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column lettering">
+    <div class="content">
+      <img src="/images/Building.JPG" alt="Lights" style="width:100%">
+      <h4>Lights</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column illustrations">
+    <div class="content">
+      <img src="/images/crystal.jpg" alt="illustrations" style="width:100%">
+      <h4>Crystal</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+  <div class="column illustrations">
+    <div class="content">
+      <img src="/images/Sea.JPG" alt="Car" style="width:100%">
+      <h4>Retro</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column lettering">
+    <div class="content">
+      <img src="/images/Hurdles.JPG" alt="lettering" style="width:100%">
+      <h4>Fast</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column illustrations">
+    <div class="content">
+      <img src="/images/Island.JPG" alt="Car" style="width:100%">
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+  <div class="column lettering">
+    <div class="content">
+      <img src="/images/Never.JPG" alt="lettering" style="width:100%">
+      <h4>Girl</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column illustrations">
+    <div class="content">
+      <img src="/images/Nostalgia.JPG" alt="illustrations" style="width:100%">
+      <h4>Man</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+      <img src="/images/Patterns.JPG" alt="People" style="width:100%">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+    <script>
+        var header = document.getElementById("myBtnContainer");
+  var btns = header.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+    });
+  };
+
+        filterSelection("all") // Execute the function and show all columns
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("column");
+          if (c == "all") c = "";
+          // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        
+        // Show filtered elements
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {
+              element.className += " " + arr2[i];
+            }
+          }
+        }
+        
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        
+        
+        // Add active class to the current button (highlight it)
+        
+          </script>
+      <footer>
+        <p class="thanks">
+              Thanks for visiting!
+        </p>
+        <p>Created with  <i class="fas fa-heart"> </i> by Maha </p>
+      </footer>
+</body>
+</html>
