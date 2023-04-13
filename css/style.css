@@ -554,7 +554,7 @@ h3{
     }
     .menu a.current{
       background-color: transparent;
-      color: blue ;
+      color: blue;
       text-decoration: underline;
 
   }
