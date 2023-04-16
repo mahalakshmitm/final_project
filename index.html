@@ -44,9 +44,10 @@
             <h1 class="title">
                 Hey There!
             </h1>
-            <marquee> Welcome to Maha's Design Porfolio !</marquee>
+            <div class="scrolling-text">
+                Welcome to Maha's Design Portfolio!</div>
             <div class="card">     
-            <img src="images/Aboutme.jpg" width="600px" height= "600px"alt="Profile Picture">
+            <img src="images/Aboutme.jpg" width="600" height= "600" alt="Profile Picture">
             <div class="card_content">
             <h2>Little about me</h2>
             <p>
@@ -62,7 +63,7 @@
     <h2 class="scard_h2"> My Skills</h2>
     <div class="small cards">
         <a href="https://www.instagram.com/the.sylph/" class="scard">
-            <img src="images/fashion.jpg" width="300px" height="200px" alt="Profile Picture">
+            <img src="images/fashion.jpg" width="300" height="200" alt="Profile Picture">
             <div class="scard_content">
                 <h3>Fashion Design</h3>
                 <p>
@@ -71,7 +72,7 @@
             </div>
         </a>
         <a href="https://www.mahalakshmitm.com/" class="scard">
-            <img src="images/product.jpg" width="300px" height="200px" alt="Profile Picture">
+            <img src="images/product.jpg" width="300" height="200" alt="Profile Picture">
             <div class="scard_content">
                 <h3>Product Design</h3>
                 <p class="scard_p">
@@ -80,7 +81,7 @@
             </div>
         </a>
         <a href="https://www.behance.net/Mahalakshmi2130" class="scard">
-            <img src="images/digitalart.jpg" width="300px" height="200px" alt="Profile Picture">
+            <img src="images/digitalart.jpg" width="300" height="200" alt="Profile Picture">
             <div class="scard_content">
                 <h3>Digital Art</h3>
                 <p>
@@ -89,7 +90,7 @@
             </div>
         </a>
         <a href="https://www.mahalakshmitm.com/" class="scard">
-            <img src="images/painting.jpg" width="300px" height="200px" alt="Profile Picture">
+            <img src="images/painting.jpg" width="300" height="200" alt="Profile Picture">
             <div class="scard_content">
                 <h3>Paintings</h3>
                 <p>
@@ -97,9 +98,26 @@
                 </p>
             </div>
         </a>
+        <div class="contact-form-container">
+            <h2>Would love to connect!</h2>
+            <form>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name..">
+              
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Your email..">
+              
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Your message.." style="height:200px"></textarea>
+              
+              <input type="submit" value="Submit">
+            </form>
+          </div>
     </div>
 </section>
-        </article>
+</article>
+
+
     </main>
     <script>
 const header = document.querySelector('.header');

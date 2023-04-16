@@ -12,6 +12,26 @@ body{
     background-color: white;
     font-family:"Avenir","Sacramento" ;
 }
+.scrolling-text {
+  font-family: "Avenir", 'Times New Roman', Times, serif;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  color: blue;
+  animation: scrolling 30s linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+      transform: translateX(100%);
+  }
+
+  100% {
+      transform: translateX(-100%);
+  }
+}
 a{
     text-decoration: none;
 }
@@ -82,13 +102,6 @@ ul{
   animation: imageSlideUp 1s ease-in-out; /* Add a slide-up animation */
 }
 
-marquee {
-  color: #dc306e;
-  font-family: "Avenir", "Times New Roman";
-  font-size: 40px;
-  margin-top: 20px;
-  animation: marqueeFadeIn 1s ease-in-out; /* Add a fade-in animation */
-}
 /* .card {
     max-width: 400px; /* Set a maximum width for tablet devices */
   /* } */
@@ -241,6 +254,58 @@ marquee {
     transform: rotate(45deg);
     top:0;
 }
+/* CONTACT FORM */
+
+form{
+  margin-left: 30px;
+  margin-right: 30px;
+  font-family: Avenir,"Times New Roman", sans-serif;
+}
+.contact-form-container {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: yellow;
+}
+label{
+  font-size: 16px;
+}
+
+/* Input fields in the contact form */
+.contact-form-container input[type=text], 
+.contact-form-container textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffffff;
+}
+
+/* Style for focus state on input fields */
+.contact-form-container input[type=text]:focus, 
+.contact-form-container textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #2d762f;
+}
+
+/* Submit button in the contact form */
+.contact-form-container input[type=submit] {
+  background-color: #2d762f;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  width: 50%;
+  margin-top: 10px;
+}
+
+/* Style for hover state on submit button */
+.contact-form-container input[type=submit]:hover {
+  background-color: #45a049;
+} 
 
 .banner {
     height: 80vh;
@@ -291,7 +356,7 @@ p{
   text-align: justify;
 }
 footer {
-  background-color:dc306e;
+  /* background-color:dc306e; */
   color: #dc306e;
   padding: 10px;
   text-align: center;
@@ -301,6 +366,7 @@ footer {
 footer p{
   text-align: center;
   padding-bottom: 10px;
+  font-weight: bolder;
 }
 
 p .thanks{
@@ -318,7 +384,7 @@ h3{
 }
 footer {
   background-color:#dc306e;
-  color: white;
+  color: black;
   padding: 10px;
   text-align: center;
   margin-top: 20px;
@@ -337,8 +403,10 @@ p .thanks{
   box-sizing: border-box;
 }
 h2{
-  font-family: "Avenir", 'Times New Roman', Times, serif;
-  font-size: 40px;
+  font-family: "Playfair Display", 'Times New Roman', Times, serif;
+  font-size: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
 }
 h2.uni{
@@ -468,7 +536,6 @@ h4{
 }
 
 
-
 /* TIMELINE-------- */
 .timeline {
   width: 80%;
@@ -517,6 +584,32 @@ h4{
 
 /* -------------------------------TABLET----------------- */
 @media screen and (min-width: 764px) {
+  .contact-form-container {
+    margin-top: 100px;
+    padding: 100px;
+    background-color: yellow;
+  }
+  label{
+    font-size: 24px;
+  }
+  form{
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: Avenir,"Times New Roman", sans-serif;
+  }
+  .contact-form-container input[type=submit] {
+    font-size: 20px;
+  }
+  .contact-form-container input[type=text], 
+.contact-form-container textarea {
+  font-size: 20px;
+}
+h2{
+  font-family: "Playfair Display", 'Times New Roman', Times, serif;
+  font-size: 40px;
+  padding-top: 40px;
+  text-align: center;
+}
   p {
     padding-top: 16px;
     font-size: 18px;
@@ -613,7 +706,7 @@ h3{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding-left: 49px;
+  padding-left: 0px;
   padding-top: 40px;
 }
 
@@ -713,7 +806,8 @@ h3{
     }
     .menu a.current{
       background-color: transparent;
-      color: blue;
+      color: black;
+      font-weight: bolder;
       text-decoration: underline;
 
   }
@@ -747,7 +841,7 @@ h3{
   
   footer {
     background-color:#dc306e;
-    color: white;
+    color: black;
     padding: 10px;
     text-align: center;
     margin-top: 20px;
@@ -756,6 +850,7 @@ h3{
   p .thanks{
     padding-top: 20px;
     font-size: 24px;
+    font-weight: bolder;
     padding-left: 60px;
     padding-right: 60px;
     text-align: center;
