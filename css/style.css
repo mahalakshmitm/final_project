@@ -889,10 +889,10 @@ h3{
     animation: none;
   }
   .content{
-    animation: none;
+    transform: none;
   }
   .content:hover{
-    animation: none;
+    transform: none;
   }
  
 }
