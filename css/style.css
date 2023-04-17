@@ -1,12 +1,17 @@
-/* Theming */
 
-
-/* Reset */
 *{
     margin: 0;
     padding: 0;
     font-family: "Avenir", 'Times New Roman', Times, serif;
     box-sizing: border-box;
+}
+.skip{
+  position:absolute;
+  left: -1000px;
+}
+.skip:focus{
+  position:relative;
+  left:0;
 }
 body{
     background-color: white;
@@ -128,15 +133,6 @@ ul{
     transform: translateY(0);
   }
 }
-
-@keyframes marqueeFadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 /* SMALL CARDS */
 .small.cards {
   display: flex;
@@ -168,7 +164,7 @@ ul{
   margin: 20px 0;
   white-space: normal;
   max-width: 100%;
-  overflow-wrap: break-word; /* Add this property to allow long words to break and wrap */
+  overflow-wrap: break-word; 
 }
 
 .scard p {
@@ -206,7 +202,7 @@ ul{
     position: fixed;
     right: 0;
     padding: 26px 20px;
-}/* Style label tag */
+}
 
 .hamb-line {
     background: black;
@@ -215,7 +211,7 @@ ul{
     position: relative;
     width: 24px;
 
-} /* Style span tag */
+} 
 
 .hamb-line::before,
 .hamb-line::after{
@@ -237,9 +233,8 @@ ul{
 
 .side-menu {
     display: none;
-} /* Hide checkbox */
+} 
 
-/* Toggle menu icon */
 .side-menu:checked ~ nav{
     max-height: 100%;
 }
@@ -270,7 +265,6 @@ label{
   font-size: 16px;
 }
 
-/* Input fields in the contact form */
 .contact-form-container input[type=text], 
 .contact-form-container textarea {
   width: 100%;
@@ -290,7 +284,6 @@ label{
   border-bottom: 1px solid #2d762f;
 }
 
-/* Submit button in the contact form */
 .contact-form-container input[type=submit] {
   background-color: #2d762f;
   color: #ffffff;
@@ -302,7 +295,6 @@ label{
   margin-top: 10px;
 }
 
-/* Style for hover state on submit button */
 .contact-form-container input[type=submit]:hover {
   background-color: #45a049;
 } 
@@ -421,7 +413,7 @@ h2.uni{
 body {
   background-color: white;
   /* padding: 20px; */
-  font-family: Avenir,"Times New Roman",;
+  font-family: Avenir,"Times New Roman";
 }
 #myBtnContainer{
   display: flex;

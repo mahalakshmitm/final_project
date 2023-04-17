@@ -14,13 +14,14 @@
 	<link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Avenir" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Baskerville" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Covered By Your Grace" rel="stylesheet">
 	<title>About Me</title>
 </head>
 <body>
+    <a href="#mainstuff" class="skip">Skip to main content</a>
     <!-- Navigation bar -->
     <header class="header sticky" style="z-index: 2;">
         <!-- Logo -->
@@ -127,7 +128,7 @@ function toggleHeaderAnimation() {
   // Get the current scroll position
   const scrollPosition = window.scrollY;
 
-  // Add animation class if scrolled beyond a certain threshold, otherwise remove it
+// Scroll Animation
   if (scrollPosition > 0) {
     header.classList.add('animate-header');
   } else {
