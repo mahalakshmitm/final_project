@@ -19,13 +19,14 @@ body{
 }
 .scrolling-text {
   font-family: "Avenir", 'Times New Roman', Times, serif;
-  font-size: 40px;
+  font-size: 20px;
+  text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
   white-space: nowrap;
   overflow: hidden;
   color: blue;
-  animation: scrolling 30s linear infinite;
+  /* animation: scrolling 30s linear infinite; */
 }
 
 @keyframes scrolling {
@@ -145,7 +146,7 @@ ul{
 }
 
 .scard {
-  flex-basis: calc(50% - 20px); /* Set flex basis to 50% minus margin on mobile view */
+  flex-basis: calc(50% - -140px); /* Set flex basis to 50% minus margin on mobile view */
   border: solid 1px #dc306e;
   border-radius: 20px;
   align-items: center;
@@ -169,8 +170,8 @@ ul{
 
 .scard p {
   font-size: 16px;
-  padding-left: 40px;
-  text-align: justify;
+    padding-left: 20px;
+    text-align: center;
 }
 
 /* Nav menu */
@@ -200,8 +201,9 @@ ul{
     cursor: pointer;
     /* float: right; */
     position: fixed;
+    z-index: -80;
     right: 0;
-    padding: 26px 20px;
+    padding: 22px 22px;
 }
 
 .hamb-line {
@@ -867,12 +869,12 @@ h3{
   
 }
 @media screen and (prefers-reduced-motion:reduce){
-  .scrolling-text
+  /* .scrolling-text
   {
     animation: none;
     opacity: 1 !important;
     transform: none !important;
-  }
+  } */
   .scard:hover{
     animation: none;
   
