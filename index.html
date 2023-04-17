@@ -2,7 +2,6 @@
 	<!-- Do no make any changes to this file, but you should still review the tags to make sure that you are familiar with them. -->
 
 <html lang="en">
-<!-- All of the meta data for the page belongs in the header tag -->
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Avenir" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Baskerville" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Covered By Your Grace" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
 	<title>About Me</title>
 </head>
 <body>
@@ -122,29 +121,46 @@
     </main>
     <script>
 const header = document.querySelector('.header');
+const banner = document.querySelector('.banner');
+let isAnimationEnabled = true; 
 
-// Function to toggle animation class on scroll
+
 function toggleHeaderAnimation() {
-  // Get the current scroll position
+
   const scrollPosition = window.scrollY;
 
-// Scroll Animation
-  if (scrollPosition > 0) {
+  if (isAnimationEnabled && scrollPosition > 0) {
     header.classList.add('animate-header');
   } else {
     header.classList.remove('animate-header');
   }
 };
 
-// Add event listener to window scroll event
-window.addEventListener('scroll', toggleHeaderAnimation);
 
-window.addEventListener('scroll', function() {
-  // Calculate the opacity based on scroll position
-  var opacity = 1 - window.pageYOffset / (window.innerHeight / 2);
-  // Set the opacity on the banner element
-  document.querySelector('.banner').style.opacity = opacity;
-});
+function handleScroll() {
+  if (isAnimationEnabled) {
+    var opacity = 1 - window.pageYOffset / (window.innerHeight / 2);
+    banner.style.opacity = opacity;
+  }
+}
+
+window.addEventListener('scroll', toggleHeaderAnimation);
+window.addEventListener('scroll', handleScroll);
+
+function updateAnimationStatus() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+   
+    isAnimationEnabled = false;
+  } else {
+ 
+    isAnimationEnabled = true;
+  }
+}
+
+updateAnimationStatus();
+
+window.addEventListener('resize', updateAnimationStatus);
+
   
 </script>
 <footer>
